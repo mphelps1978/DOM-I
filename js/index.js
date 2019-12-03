@@ -42,6 +42,11 @@ const siteContent = {
 	},
 };
 
+
+// End JSON Content
+
+// OK, Let's get the page content ACTUALLY ON THE PAGE
+
 // setting the images first
 let logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
@@ -69,3 +74,49 @@ navBar.forEach(item => (item.style.color = 'green'));
 // CTA Stuff
 
 document.querySelector('h1').textContent = siteContent['cta']['h1'];
+document.querySelector('button').textContent = siteContent['cta']['button'];
+
+// Top-Content Stuff
+
+//features
+let features = document.querySelector('div:nth-child(1) h4');
+features.textContent = siteContent['main-content']['features-h4'];
+let featuresText = document.querySelector('div:nth-child(1) p');
+featuresText.textContent = siteContent['main-content']['features-content'];
+
+// about
+let about = document.querySelector('div:nth-child(2) h4');
+about.textContent = siteContent['main-content']['about-h4'];
+let aboutText = document.querySelector('div:nth-child(2) p');
+aboutText.textContent = siteContent['main-content']['about-content'];
+
+// End Top-Content Stuff
+
+//Bottom-Content Stuff
+
+  // Services
+let services = document.querySelector('.bottom-content div:nth-child(1) h4');
+services.textContent = siteContent['main-content']['services-h4'];
+let servicesText = document.querySelector('.bottom-content div:nth-child(1) p');
+servicesText.textContent = siteContent['main-content']['services-content'];
+
+  // Product
+let product = document.querySelector('.bottom-content div:nth-child(2) h4');
+product.textContent = siteContent['main-content']['product-h4'];
+let productText = document.querySelector('.bottom-content div:nth-child(2) p');
+productText.textContent = siteContent['main-content']['product-content'];
+
+  // Vision
+let vision = document.querySelector('.bottom-content div:nth-child(3) h4');
+vision.textContent = siteContent['main-content']['vision-h4'];
+let visionText = document.querySelector('.bottom-content div:nth-child(3) p');
+visionText.textContent = siteContent['main-content']['vision-content'];
+
+// End Bottom-Content Stuff
+
+//Footer Stuff
+
+
+
+
+

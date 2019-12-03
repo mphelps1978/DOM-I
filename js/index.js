@@ -69,6 +69,25 @@ navBar[4].textContent = siteContent['nav']['nav-item-5'];
 navBar[5].textContent = siteContent['nav']['nav-item-6'];
 
 navBar.forEach(item => (item.style.color = 'green'));
+navBar.forEach(item => (item.style.textDecoration = 'none'));
+
+//Apppended Item
+const appendList = document.querySelector('nav');
+let newAppendItem = document.createElement('a');
+newAppendItem.textContent = 'Appended Item';
+newAppendItem.href = '#';
+appendList.appendChild(newAppendItem);
+newAppendItem.style.color = 'green';
+newAppendItem.style.textDecoration = 'none';
+
+//Prepended Item
+const prependList = document.querySelector('nav');
+let newPrependItem = document.createElement('a');
+newPrependItem.textContent = 'Prepended Item';
+newPrependItem.href = '#';
+prependList.prepend(newPrependItem);
+newPrependItem.style.color = 'green';
+newPrependItem.style.textDecoration = 'none';
 
 // CTA Stuff
 
@@ -130,3 +149,18 @@ contactInfo[2].textContent = siteContent['contact']['email'];
 document.querySelector('footer p').textContent = siteContent['footer']['copyright'];
 
 // End Footer Stuff
+
+// Stretch Modifications
+
+//The Links are green, so the section headers should be too
+contactHead.style.color = 'green';
+const sectionTitles = document.querySelectorAll('.text-content h4');
+sectionTitles.forEach(item => (item.style.color = 'green'));
+
+/* I hate the "pure white" look of pages. Let's Spruce it up a tad
+First, we'll give it a litte color, and then widen it with some padding, so the content doesn't push out on the edges */
+document.querySelector('.container').style.width = '1000px';
+document.querySelector('.container').style.padding = '5%';
+document.querySelector('.container').style.background = '#e6f2ff';
+
+/* But it looks kinda Crappy with the green text. Thank god I'm not a designer */

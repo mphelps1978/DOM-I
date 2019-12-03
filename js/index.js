@@ -42,7 +42,6 @@ const siteContent = {
 	},
 };
 
-
 // End JSON Content
 
 // OK, Let's get the page content ACTUALLY ON THE PAGE
@@ -94,19 +93,19 @@ aboutText.textContent = siteContent['main-content']['about-content'];
 
 //Bottom-Content Stuff
 
-  // Services
+// Services
 let services = document.querySelector('.bottom-content div:nth-child(1) h4');
 services.textContent = siteContent['main-content']['services-h4'];
 let servicesText = document.querySelector('.bottom-content div:nth-child(1) p');
 servicesText.textContent = siteContent['main-content']['services-content'];
 
-  // Product
+// Product
 let product = document.querySelector('.bottom-content div:nth-child(2) h4');
 product.textContent = siteContent['main-content']['product-h4'];
 let productText = document.querySelector('.bottom-content div:nth-child(2) p');
 productText.textContent = siteContent['main-content']['product-content'];
 
-  // Vision
+// Vision
 let vision = document.querySelector('.bottom-content div:nth-child(3) h4');
 vision.textContent = siteContent['main-content']['vision-h4'];
 let visionText = document.querySelector('.bottom-content div:nth-child(3) p');
@@ -114,9 +113,20 @@ visionText.textContent = siteContent['main-content']['vision-content'];
 
 // End Bottom-Content Stuff
 
-//Footer Stuff
+//Contact Stuff
 
+let contactHead = document.querySelector('.contact h4');
+contactHead.textContent = siteContent['contact']['contact-h4'];
 
+let contactInfo = document.querySelectorAll('.contact p');
+contactInfo[0].textContent = siteContent['contact']['address'];
+contactInfo[1].textContent = siteContent['contact']['phone'];
+contactInfo[2].textContent = siteContent['contact']['email'];
 
+// End Contact Stuff
 
+// Footer Stuff
 
+document.querySelector('footer p').textContent = siteContent['footer']['copyright'];
+
+// End Footer Stuff

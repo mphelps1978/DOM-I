@@ -69,7 +69,6 @@ navBar[4].textContent = siteContent['nav']['nav-item-5'];
 navBar[5].textContent = siteContent['nav']['nav-item-6'];
 
 navBar.forEach(item => (item.style.color = 'green'));
-navBar.forEach(item => (item.style.textDecoration = 'none'));
 
 //Apppended Item
 const appendList = document.querySelector('nav');
@@ -77,8 +76,6 @@ let newAppendItem = document.createElement('a');
 newAppendItem.textContent = 'Appended Item';
 newAppendItem.href = '#';
 appendList.appendChild(newAppendItem);
-newAppendItem.style.color = 'green';
-newAppendItem.style.textDecoration = 'none';
 
 //Prepended Item
 const prependList = document.querySelector('nav');
@@ -86,8 +83,6 @@ let newPrependItem = document.createElement('a');
 newPrependItem.textContent = 'Prepended Item';
 newPrependItem.href = '#';
 prependList.prepend(newPrependItem);
-newPrependItem.style.color = 'green';
-newPrependItem.style.textDecoration = 'none';
 
 // CTA Stuff
 
@@ -157,10 +152,40 @@ contactHead.style.color = 'green';
 const sectionTitles = document.querySelectorAll('.text-content h4');
 sectionTitles.forEach(item => (item.style.color = 'green'));
 
+// Also, I hate underlined links, even if you hover them. Let's 86 those
+navBar.forEach(item => (item.style.textDecoration = 'none'));
+
+//Now, since we appended and prepended some new links, we should PROBABLY style them the same, yes?
+
+newAppendItem.style.color = 'green';
+newAppendItem.style.textDecoration = 'none';
+
+newPrependItem.style.color = 'green';
+newPrependItem.style.textDecoration = 'none';
+
 /* I hate the "pure white" look of pages. Let's Spruce it up a tad
 First, we'll give it a litte color, and then widen it with some padding, so the content doesn't push out on the edges */
 document.querySelector('.container').style.width = '1000px';
-document.querySelector('.container').style.padding = '5%';
+document.querySelector('.container').style.padding = '0 5%';
 document.querySelector('.container').style.background = '#e6f2ff';
 
 /* But it looks kinda Crappy with the green text. Thank god I'm not a designer */
+
+/*  Since we're talking about ugly styles.. I had to.. just to practice using a template literal for styling   */
+
+// const blinkingText = document.querySelector('h1');
+
+// blinkingText.style.blinking = `
+// {
+//     animation:blinkingText 0.8s infinite;
+// }
+// @keyframes blinkingText{
+//     0%{     color: #000;    }
+//     49%{    color: transparent; }
+//     50%{    color: transparent; }
+//     99%{    color:transparent;  }
+//     100%{   color: #000;    }
+// }
+// `;
+
+// But that failed, and it's after midnight. I'm going to bed.

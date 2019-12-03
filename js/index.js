@@ -54,17 +54,18 @@ spacerImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 // Done with the Images
 
-//Working with the Header Now - Starting with nav links
+//NavBar stuff
 
-const navBar = document.querySelectorAll('nav a');
+let navBar = document.querySelectorAll('nav a');
+navBar[0].textContent = siteContent['nav']['nav-item-1'];
+navBar[1].textContent = siteContent['nav']['nav-item-2'];
+navBar[2].textContent = siteContent['nav']['nav-item-3'];
+navBar[3].textContent = siteContent['nav']['nav-item-4'];
+navBar[4].textContent = siteContent['nav']['nav-item-5'];
+navBar[5].textContent = siteContent['nav']['nav-item-6'];
 
-navBar.forEach((element, index) => {
-navBar.textContent =`${siteContent['nav']['nav-item-' [index]]}`;
-})
-console.log(navBar.textContent);
+navBar.forEach(item => (item.style.color = 'green'));
 
-//console.log(navBar.textContent);
-// const navArray = Array.from(navBar).forEach((link, i) => {
-//   link.textContent = `<a href ="#"> ${siteContent['nav']['nav-item-'[i+1]]}`;
-// });
-// console.log(navBar);
+// CTA Stuff
+
+document.querySelector('h1').textContent = siteContent['cta']['h1'];

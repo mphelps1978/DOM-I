@@ -60,13 +60,18 @@ spacerImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 //NavBar stuff
 
-let navBar = document.querySelectorAll('nav a');
-navBar[0].textContent = siteContent['nav']['nav-item-1'];
-navBar[1].textContent = siteContent['nav']['nav-item-2'];
-navBar[2].textContent = siteContent['nav']['nav-item-3'];
-navBar[3].textContent = siteContent['nav']['nav-item-4'];
-navBar[4].textContent = siteContent['nav']['nav-item-5'];
-navBar[5].textContent = siteContent['nav']['nav-item-6'];
+let navBar = document.querySelectorAll('a');
+console.log(navBar);
+navBar.forEach((element, i) => {
+	element.textContent = siteContent['nav'][`nav-item-${i}`];
+});
+
+// navBar[0].textContent = siteContent['nav']['nav-item-1'];
+// navBar[1].textContent = siteContent['nav']['nav-item-2'];
+// navBar[2].textContent = siteContent['nav']['nav-item-3'];
+// navBar[3].textContent = siteContent['nav']['nav-item-4'];
+// navBar[4].textContent = siteContent['nav']['nav-item-5'];
+// navBar[5].textContent = siteContent['nav']['nav-item-6'];
 
 navBar.forEach(item => (item.style.color = 'green'));
 

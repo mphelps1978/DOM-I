@@ -147,8 +147,11 @@ document.querySelector('footer p').textContent = siteContent['footer']['copyrigh
 
 // Stretch Modifications
 
-//The Links are green, so the section headers should be too
+// Now, keep in mind that MOST of the variables were defined above, so I don't need to re-define them. The beauty of coding
+
+//The Links are green, so the section headers should be too, as well as the contact header.
 contactHead.style.color = 'green';
+
 const sectionTitles = document.querySelectorAll('.text-content h4');
 sectionTitles.forEach(item => (item.style.color = 'green'));
 
@@ -163,11 +166,10 @@ newAppendItem.style.textDecoration = 'none';
 newPrependItem.style.color = 'green';
 newPrependItem.style.textDecoration = 'none';
 
-/* I hate the "pure white" look of pages. Let's Spruce it up a tad
-First, we'll give it a litte color, and then widen it with some padding, so the content doesn't push out on the edges */
+/* I hate the "pure white" background of pages. It kills my already weakend eyes. Let's Spruce it up a tad. First, we'll give the container a litte color, and then widen it with some padding, so the content doesn't run into the edges */
+document.querySelector('.container').style.background = '#e6f2ff';
 document.querySelector('.container').style.width = '1000px';
 document.querySelector('.container').style.padding = '0 5%';
-document.querySelector('.container').style.background = '#e6f2ff';
 
 /* But it looks kinda Crappy with the green text. Thank god I'm not a designer */
 
